@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="shopApp"> <!-- =Direktive angular-app -->
+<head>
+    <meta charset="utf8" />
+    <title>Shop13 Guitars & more</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body> <!-- =Direktive -->
+
+<h2>Suche</h2>
+<form>
+    <input type="text" ng-model="search">
+    <p ng-show="search">Du gibst ein: {{search.toUpperCase() + "!"}}</p>  <!-- search ist eine Expression -->
+    <!-- ng-show ist eine Direktive, die Elemente erst einblendet, wenn die übergebende Variable einen Wert enthält -->
+</form>
+
+Zusammenzählen von Zahlen: {{1 + 2 + 3}}
+
+<h2>Artikel</h2>
+<table class="table" ng-controller="ArticlesCtrl"> <!-- ArticlesCtrl = Controller -->
+    <tr ng-repeat="article in articles | filter:search"> <!-- Ein Filter "|" mit dem Namen filter und dem Argument ":" search -->
+        <td>{{article.id}}</td>
+        <td>{{article.name}}</td>
+        <td>{{article.description}}</td>
+        <td>{{article.price}}</td>
+    </tr>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script src="../module/app.js"></script>
+</body>
+</html>

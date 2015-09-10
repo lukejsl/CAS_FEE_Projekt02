@@ -1,0 +1,7 @@
+[
+
+  { "id": "1", "name": "Guitare E", "description": "Beschreibung zum Produkt", "price": 500 },
+  { "id": "2", "name": "Guitar Classic", "description": "Beschreibung zum Produkt",   "price": 550 },
+  { "id": "3", "name": "Guitar Red", "description": "Beschreibung zum Produkt", "price": 600 }
+
+]
